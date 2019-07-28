@@ -11,6 +11,9 @@
   -webkit-column-gap: 1em;
   column-gap: 1em;
 }
+.waterfall .fa-heart.active{
+  color:red;
+}
 
 .pin {
   padding: 5px;
