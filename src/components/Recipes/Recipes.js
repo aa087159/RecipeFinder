@@ -20,7 +20,7 @@ class Recipes extends Component {
                            return (
                                <div>
                                     <h3 className="text-center m-4">Search Results</h3>
-                                    <div class="waterfall">
+                                    <div className="waterfall">
                                         {recipes.map(item=>(
                                             <Recipe key={uuid.v4()} recipe={item.recipe} />
                                         ))}

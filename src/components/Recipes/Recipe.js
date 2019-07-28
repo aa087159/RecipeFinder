@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import $ from 'jquery'
+import uuid from 'uuid'
 
 const Recipe = (props) => {
     const { label, calories, image, ingredientLines,healthLabels, totalTime } = props.recipe
@@ -29,17 +29,17 @@ const Recipe = (props) => {
                         <Link to="./www.google.com.tw" className="btn btn-dark btn-sm">
                             <img src={image} alt=""/>
                         </Link><br/>
-                        <h3>{finalLabel}</h3>
-                        <i class="fas fa-heart" onClick={(e)=>{e.target.style.color='red'}}></i>{" "}{randomNumber}{" "}
-                        <i class="far fa-comment-dots">{" "}{totalTime}</i>
+                        <div className="h3">{finalLabel}</div>
+                        <i className="fas fa-heart" onClick={(e)=>{e.target.style.color='red'}}></i>{" "}{randomNumber}{" "}
+                        <i className="far fa-comment-dots">{" "}{totalTime}</i>
                         <p>Calories: {Math.round(calories)}</p>
-                        <p>{ingredientLines.map((item,index)=>{return <React.Fragment>
+                        <p>{ingredientLines.map((item,index)=>{return <React.Fragment key={uuid.v4()}>
                             <strong>{index+1}.</strong>{" "}{item}
                             <br /> 
                         </React.Fragment>
                             })}
                         </p>
-                        <p>{healthLabels.map(item=>{return <React.Fragment>
+                        <p>{healthLabels.map(item=>{return <React.Fragment key={uuid.v4()}>
                                 <Link to="./www.google.com.tw" className='text-decoration-none text-secondary'>
                                     #{item}{" "}
                                 </Link>
