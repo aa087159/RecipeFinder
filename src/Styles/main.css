@@ -1,3 +1,9 @@
+.showCaseImg img{
+  width: 100%;
+}
+
+
+
 .wrapper {
   width: 95%;
   margin: 0 auto;
@@ -11,11 +17,18 @@
   -webkit-column-gap: 1em;
   column-gap: 1em;
 }
-.waterfall .fa-heart.active{
-  color:red;
+
+.waterfall .fa-heart.active {
+  color: red;
+}
+
+nav .navHeader {
+  font-family: 'Dancing Script', cursive;
+  font-size: 45px;
 }
 
 .pin {
+  font-family: 'Open Sans Condensed', sans-serif;
   padding: 5px;
   margin: 0 0.125em 1em;
   -webkit-column-break-inside: avoid;
@@ -45,10 +58,11 @@
 .labelOne {
   position: absolute;
   text-align: center;
-  padding: 5px 0;
+  padding: 5px 5px;
   background-color: rgba(238, 77, 77, 0.6);
   color: white;
-  font-size: 25px;
+  font-size: 35px;
+  font-weight: 500;
   width: 100%;
   top: 180px;
 }
@@ -56,10 +70,11 @@
 .labelTwo {
   position: absolute;
   text-align: center;
-  padding: 5px 0;
+  padding: 5px 5px;
   background-color: rgba(238, 77, 77, 0.6);
   color: white;
-  font-size: 25px;
+  font-size: 35px;
+  font-weight: 500;
   width: 100%;
   top: 200px;
 }
@@ -67,11 +82,13 @@
 .labelThree {
   position: absolute;
   text-align: center;
-  padding: 5px 0;
+  padding: 5px 5px;
   background-color: rgba(238, 77, 77, 0.6);
   color: white;
-  font-size: 25px;
+  font-size: 35px;
+  font-weight: 500;
   width: 100%;
   top: 170px;
 }
 /*# sourceMappingURL=main.css.map */
+

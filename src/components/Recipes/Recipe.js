@@ -1,4 +1,4 @@
-import React,{useState } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import uuid from 'uuid'
 
@@ -20,9 +20,13 @@ const Recipe = (props) => {
       }else if(label.length>=35){
         finalLabel=Labelthree;
       }
+
+
     const heartHandle = () => {
         isHeartActive ? setHeartActive(false) : setHeartActive(true);
     }
+
+
     //useState hook 
     React.useEffect(() => {
         if (isHeartActive) {
@@ -32,7 +36,10 @@ const Recipe = (props) => {
             setRandomNumber(randomNumber-1);
         }
     }, [isHeartActive]);
+
+
     return (
+        
         <div className="pin">
             <div className="my-4">
                 <div className="px-3">
@@ -40,9 +47,9 @@ const Recipe = (props) => {
                         <Link to="./www.google.com.tw" className="btn btn-dark btn-sm">
                             <img src={image} alt=""/>
                         </Link><br/>
-                        <div className="h3">{finalLabel}</div>
+                        <div className="h1">{finalLabel}</div>
                         <i className={`fas fa-heart ${isHeartActive?'active':''}`} onClick={heartHandle}></i>{" "}{randomNumber}{" "}
-                        <i className="far fa-comment-dots">{" "}{totalTime}</i>
+                        <i className="far fa-comment-dots"></i>{" "}{totalTime}
                         <p>Calories: {Math.round(calories)}</p>
                         <p>{ingredientLines.map((item,index)=>{return <React.Fragment key={uuid.v4()}>
                             <strong>{index+1}.</strong>{" "}{item}

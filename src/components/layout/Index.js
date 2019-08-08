@@ -1,14 +1,14 @@
 import React from 'react'
 import Recipes from '../Recipes/Recipes'
-import Search from '../Recipes/Search'
+import ShowCase from '../Recipes/ShowCase'
 
 const Index = () => {
-    return (
+    
+   return(
         <React.Fragment>
-            <Search />
-            <Recipes />
+            <Recipes /> 
         </React.Fragment>
-    )
+        )
 }
 
 export default Index
