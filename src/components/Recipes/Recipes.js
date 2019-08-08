@@ -13,13 +13,13 @@ class Recipes extends Component {
         return (
             <Consumer>
                 {value => {
-                    const { recipes } = value.state
-                       if(recipes === undefined || recipes.length === 0){
-                            return < Spinner/>
-                       }else{
+                    const { recipes, clicked, dishName } = value.state
+                       if(dishName.length!==0 && clicked===true && recipes.length===0  ){
+                           return <Spinner />
+                       }else
                            return (
                                <div>
-                                    <h3 className="text-center m-4">Search Results</h3>
+                                    
                                     <div className="waterfall">
                                         {recipes.map(item=>(
                                             <Recipe key={uuid.v4()} recipe={item.recipe} />
@@ -27,7 +27,9 @@ class Recipes extends Component {
                                     </div>
                                 </div>
                            )
-                       }
+                       
+                           
+                       
                    
                 }}
             </Consumer>
