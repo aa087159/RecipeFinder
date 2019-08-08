@@ -39,7 +39,8 @@ export class Provider extends Component {
                                     const reactID = 'f0924745'
                                     const reactKey = 'b09175f0c930fd24e4e355afa385b033'
                                     this.setState({
-                                        showSpinner:true
+                                        showSpinner:true,
+                                        recipes:[]
                                     });
                                     axios.get(`https://api.edamam.com/search?q=${this.state.dishName}&app_id=${reactID}&app_key=${reactKey}&from=0&to=30`)
                                     .then(res=>{this.setState({
