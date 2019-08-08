@@ -13,22 +13,26 @@ class Recipes extends Component {
         return (
             <Consumer>
                 {value => {
-                    const { recipes } = value.state
-                       if(recipes === undefined || recipes.length === 0){
-                            return < Spinner/>
-                       }else{
-                           return (
-                               <div>
-                                    <h3 className="text-center m-4">Search Results</h3>
-                                    <div className="waterfall">
-                                        {recipes.map(item=>(
-                                            <Recipe key={uuid.v4()} recipe={item.recipe} />
-                                        ))}
-                                    </div>
-                                </div>
-                           )
-                       }
-                   
+                    const { recipes,showSpinner } = value.state
+                        return (
+                            <div>
+                                {
+                                    showSpinner &&
+                                    <Spinner />
+                                }
+                                {
+                                    recipes && recipes.length>0 &&
+                                    <React.Fragment>
+                                        <h3 className="text-center m-4">Search Results</h3>
+                                        <div className="waterfall">
+                                            {recipes.map(item=>(
+                                                <Recipe key={uuid.v4()} recipe={item.recipe} />
+                                            ))}
+                                        </div>
+                                    </React.Fragment>
+                                }
+                            </div>
+                        )
                 }}
             </Consumer>
         )

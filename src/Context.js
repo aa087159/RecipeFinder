@@ -7,7 +7,8 @@ export class Provider extends Component {
     state = {
         dishName: '',
         recipes: [],
-        heart: false
+        heart: false,
+        showSpinner:false
     }
 
     onChange = (e) => {
@@ -34,13 +35,16 @@ export class Provider extends Component {
                                 state: this.state,
                                 onChange : this.onChange,
                                 onSubmit : (e) => {
-                                    e.preventDefault()
+                                    e.preventDefault();
                                     const reactID = 'f0924745'
                                     const reactKey = 'b09175f0c930fd24e4e355afa385b033'
-                                    
+                                    this.setState({
+                                        showSpinner:true
+                                    });
                                     axios.get(`https://api.edamam.com/search?q=${this.state.dishName}&app_id=${reactID}&app_key=${reactKey}&from=0&to=30`)
                                     .then(res=>{this.setState({
-                                        recipes: res.data.hits
+                                        recipes: res.data.hits,
+                                        showSpinner:false
                                     })})
                                     .catch(err=>console.log(err))
                                 },
