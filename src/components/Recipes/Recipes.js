@@ -13,8 +13,9 @@ class Recipes extends Component {
         return (
             <Consumer>
                 {value => {
-                    const { recipes, clicked, dishName } = value.state
+                    let { recipes, clicked, dishName } = value.state
                        if(dishName.length!==0 && clicked===true && recipes.length===0  ){
+                        
                            return <Spinner />
                        }else
                            return (

@@ -13,6 +13,7 @@ class Nav extends Component {
                         width: '250px'
                     }
 
+
                     return (
                         <div>
                             <nav className="bg-danger text-light row">
@@ -27,7 +28,8 @@ class Nav extends Component {
                                         value={value.state.dishName}
                                         className="form-control"
                                         onChange={value.onChange}
-                                        style={inputStyle}/>
+                                        style={inputStyle}
+                                        required/>
                                     <button type="submit" className="btn btn-dark text-light"><i className="fas fa-search"></i></button>
                                     
                                 </form>

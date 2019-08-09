@@ -36,7 +36,6 @@ export class Provider extends Component {
                                         recipes: res.data.hits
                                     })})
                                     .catch(err=>console.log(err))
-                                    this.setState({clicked: false})
                                     }
                                 }}>
                 {this.props.children}
