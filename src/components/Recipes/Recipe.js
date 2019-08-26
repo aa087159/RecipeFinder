@@ -20,7 +20,7 @@ const Recipe = (props) => {
       }else if(label.length>=35){
         finalLabel=Labelthree;
       }
-
+      
 
     const heartHandle = () => {
         isHeartActive ? setHeartActive(false) : setHeartActive(true);
@@ -71,3 +71,5 @@ const Recipe = (props) => {
 }
 
 export default Recipe
+
+

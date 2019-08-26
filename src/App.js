@@ -10,12 +10,12 @@ function App() {
     <Provider>
       <Router>
         <React.Fragment>
-          <Nav />
-          <div className="wrapper">
+          
+            <Nav />
             <Switch>
               <Route exact path="/" component={Index}/>
             </Switch>
-          </div>
+          
         </React.Fragment>
       </Router>
     </Provider>

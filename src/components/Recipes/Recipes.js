@@ -14,24 +14,20 @@ class Recipes extends Component {
             <Consumer>
                 {value => {
                     let { recipes, clicked, dishName } = value.state
-                       if(dishName.length!==0 && clicked===true && recipes.length===0  ){
-                        
+                       if(dishName.length!==0 && clicked===true && recipes.length===0){
                            return <Spinner />
-                       }else
+                       }else if(clicked===true && recipes.length!==0){
                            return (
-                               <div>
-                                    
-                                    <div className="waterfall">
+                               <div className="wholeResult" id="search">
+                                    <h1 className="text-center mb-5 mt-5 searchResult">Search Result</h1>
+                                    <div className="waterfall mb-4">
                                         {recipes.map(item=>(
                                             <Recipe key={uuid.v4()} recipe={item.recipe} />
                                         ))}
                                     </div>
                                 </div>
                            )
-                       
-                           
-                       
-                   
+                       }
                 }}
             </Consumer>
         )
