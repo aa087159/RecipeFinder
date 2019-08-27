@@ -6,10 +6,10 @@ const ShowCase = () => {
   return(
     
           <div className="slider">
-              <input type="radio" name="slider" title="slide1" checked="checked" className="slider__nav"focused/>
-              <input type="radio" name="slider" title="slide2" checked="checked" className="slider__nav"/>
-              <input type="radio" name="slider" title="slide3" checked="checked"className="slider__nav"/>
-              <input type="radio" name="slider" title="slide4" checked="checked"className="slider__nav" />
+              <input type="radio" name="slider" title="slide1" defaultChecked className="slider__nav"focused={'true'}/>
+              <input type="radio" name="slider" title="slide2" defaultChecked className="slider__nav"/>
+              <input type="radio" name="slider" title="slide3" defaultChecked className="slider__nav"/>
+              <input type="radio" name="slider" title="slide4" defaultChecked className="slider__nav" />
               <div className="slider__inner">
                 <div className="slider__contents">
                   <div className="overlay"></div>
