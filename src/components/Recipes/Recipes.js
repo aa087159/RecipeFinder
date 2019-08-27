@@ -17,6 +17,9 @@ class Recipes extends Component {
                        if(dishName.length!==0 && clicked===true && recipes.length===0){
                            return <Spinner />
                        }else if(clicked===true && recipes.length!==0){
+                            //var elmnt = document.getElementById("waterfall");
+                            //elmnt.scrollIntoView();
+                          
                            return (
                                <div className="wholeResult" id="search">
                                     <h1 className="text-center mb-5 mt-5 searchResult">Search Result</h1>
